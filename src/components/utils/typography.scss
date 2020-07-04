@@ -1,0 +1,103 @@
+/* open-sans-regular - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'),
+         url('../assests/fonts/open-sans-v17-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../assests/fonts/open-sans-v17-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+/* open-sans-700 - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'),
+         url('../assests/fonts/open-sans-v17-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../assests/fonts/open-sans-v17-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+/* nunito-sans-regular - latin */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Nunito Sans Regular'), local('NunitoSans-Regular'),
+         url('../assests/fonts/nunito-sans-v5-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../assests/fonts/nunito-sans-v5-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+/* nunito-sans-700 - latin */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Nunito Sans Bold'), local('NunitoSans-Bold'),
+         url('../assests/fonts/nunito-sans-v5-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../assests/fonts/nunito-sans-v5-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+$openSans: 'Open Sans';
+$nunito: 'Nunito Sans';
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: $white-3;
+}
+
+h1, h2, h3, h4, h5, h6, div, p {
+    font-family: $nunito;
+
+}
+
+div, p {
+    color: $white-1;
+    font-weight: 400;
+}
+
+p {
+    font-size: 20px;
+}
+
+a {
+    font-family: $openSans;
+    color: $white-4;
+    font-weight: 700;
+
+    svg {
+        fill: $white-4;
+    }
+
+    &:hover {
+        color: $white-2;
+
+        svg {
+            fill: $white-2;
+            stroke: $white-2;
+        }
+    }
+}
+
+a:hover {
+    text-decoration: none;
+  }
+
+button[type='submit'] {
+    padding: 10px;
+    color: $white-1;
+    background-color: rgba($black-1, .5);
+    border: 1px solid $black-2;
+    border-radius: 15px;
+    width: 100%;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+        border: 1px solid $black-2;
+    }
+
+    &:hover {
+        background-color: rgba($black-0, .5);
+    }
+}

@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+.container-fluid {
+  padding: 130px 60px 0px 60px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: $black-0;
+}
+
+#root {
+  width: 100%;
+}

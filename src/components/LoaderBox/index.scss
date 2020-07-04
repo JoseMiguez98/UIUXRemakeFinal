@@ -1,0 +1,17 @@
+@keyframes loader {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.loader-box {
+    border-radius: 15px;
+    background: linear-gradient(to right, lighten($black-1, 10), $black-1 15% 85%, lighten($black-1, 10));
+    animation: loader .3s infinite;
+    animation-direction: alternate;
+    animation-delay: 2s;
+}

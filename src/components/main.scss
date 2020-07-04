@@ -1,0 +1,27 @@
+// Variables & Typos
+@import 'utils/variables';
+@import 'utils/typography';
+@import 'utils/grid';
+
+// Components
+@import 'Card/index';
+@import 'CardsContainer/index';
+@import 'NavBar/index';
+@import 'Header/index';
+@import 'SearchBar/index';
+@import 'Footer/index';
+@import 'SliderBanner/index';
+@import 'PreviewSlider/index';
+@import 'GameInfoBox/index';
+@import 'CartButton/index';
+@import 'Comments/index';
+@import 'Ranking/index';
+@import 'HighScores/index';
+@import 'LoaderBox/index';
+
+//Routes
+@import '../routes/GameScreen/index';
+
+// General styles
+@import '../App.scss';
+@import '../index.scss';

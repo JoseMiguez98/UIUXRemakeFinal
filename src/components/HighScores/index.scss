@@ -1,0 +1,50 @@
+.highscores-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 26px;
+
+    &__title {
+        padding: 0;
+    }
+
+    &__scores {
+        display: flex;
+        flex-flow: column wrap;
+        max-height: 756px;
+        padding: 5px 0;
+    }
+
+    .highscore {
+        display: flex;
+        flex: 1;
+        padding: 10px;
+        &__username {
+            &__text {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 200px;
+            }
+        }
+
+        &__avatar {
+            padding-right: 15px ;
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        &__rank {
+            padding-right: 10px
+        }
+    }
+
+    .loader-box {
+        height: 60px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

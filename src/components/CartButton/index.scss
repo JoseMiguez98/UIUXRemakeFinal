@@ -1,0 +1,42 @@
+.btn-buy {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 30px 10px 30px;
+    color: $white-1;
+    font-weight: bold;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+
+    svg {
+        width: 25px;
+        height: 25px;
+        fill: $white-1;
+    }
+
+    &--add {
+        background-color: $steam-green;
+        &:active {
+            background-color: lighten($color: $steam-green, $amount: 5);
+        }
+    }
+
+    &--remove {
+        background-color: $barn-red;
+        &:active {
+            background-color: lighten($color: $barn-red, $amount: 5);
+        }
+    }
+
+    &:focus {
+        outline-width: 1px;
+        outline-color: $white-2;
+    }
+
+    &__caption {
+        display: flex;
+        justify-content: space-around;
+        width: 250px;
+    }
+}
