@@ -1,63 +1,63 @@
 .game-screen {
-    &__row {
-        width: 100%;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        padding-bottom: 23px;
+  &__row {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-bottom: 23px;
 
-        &__subtitle-wrapper {
-            flex: 1;
-        }
-
-        &__data {
-            display: flex;
-            flex-flow: row;
-            flex: 4;
-            font-size: 17px;
-            justify-content: space-between;
-        }
+    &__subtitle-wrapper {
+      flex: 1;
     }
 
-    .info-item-wrapper {
-        padding-bottom: 16px;
-        &__caption {
-            font-size: 20px;
-            img {
-                width: 30px;
-                margin-right: 10px;
-            }
-        }
+    &__data {
+      display: flex;
+      flex-flow: row;
+      flex: 4;
+      font-size: 17px;
+      justify-content: space-between;
     }
+  }
 
+  .info-item-wrapper {
+    padding-bottom: 16px;
+    &__caption {
+      font-size: 20px;
+      img {
+        width: 30px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .simplebar {
+    &-scrollbar {
+      background: rgba($black-2, .5);
+    }
+  }
+
+  .preview-slider-wrapper {
     .simplebar {
-        &-scrollbar {
-            background: rgba($black-2, .5);
+      &-scrollbar {
+        height: 10px !important;
+      }
+      &-track {
+        height: 15px;
+      }
+      &-visible {
+        &::before {
+          display: none;
         }
+      }
+      &-content {
+        bottom: 0;
+        display: flex;
+        flex-flow: row nowrap;
+      }
     }
+  }
 
-    .preview-slider-wrapper {
-        .simplebar {
-            &-scrollbar {
-                height: 10px !important;
-            }
-            &-track {
-                height: 15px;
-            }
-            &-visible {
-                &::before {
-                    display: none;
-                }
-            }
-            &-content {
-                bottom: 0;
-                display: flex;
-                flex-flow: row nowrap;
-            }
-        }
-    }
-
-    .comments-wrapper__comments, .highscores-wrapper__scores {
-        box-shadow: 2px 4px 10px lighten($black-1, 2);
-    }
+  .comments-wrapper__comments, .highscores-wrapper__scores {
+    box-shadow: 2px 4px 10px lighten($black-1, 2);
+  }
 }

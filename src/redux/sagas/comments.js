@@ -17,9 +17,9 @@ function* fetchComments({ payload }) {
         const response = yield fetch(`https://randomuser.me/api/?results=${amount}&inc=login,picture`);
         const { results:data } = yield response.json();
         const comments = yield data.map((user, index) => ({
-            id: index,
-            username: user.login.username,
-            picture: user.picture.medium
+          id: index,
+          username: user.login.username,
+          picture: user.picture.medium
         }));
         const jokes = yield fetch(`http://api.icndb.com/jokes/random/${amount}`);
         const { value:jokesData } = yield jokes.json();
