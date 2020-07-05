@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import {
   BrowserRouter as Router,
+  HashRouter,
   Switch,
   Route,
   Redirect
@@ -13,7 +14,7 @@ import Footer from './components/Footer';
 import 'simplebar/dist/simplebar.min.css';
 
 const App = () => (
-  <Router>
+  <HashRouter basename="/">
     <Header/>
       <Container fluid>
         <Switch>
@@ -23,7 +24,7 @@ const App = () => (
         </Switch>
       </Container>
     <Footer/>
-  </Router>
+  </HashRouter>
 );
 
 export default App;
