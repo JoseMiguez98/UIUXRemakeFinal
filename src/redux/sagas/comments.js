@@ -21,7 +21,7 @@ function* fetchComments({ payload }) {
           username: user.login.username,
           picture: user.picture.medium
         }));
-        const jokes = yield fetch(`http://api.icndb.com/jokes/random/${amount}`);
+        const jokes = yield fetch(`https://api.icndb.com/jokes/random/${amount}`);
         const { value:jokesData } = yield jokes.json();
         jokesData.map(({ joke }, index) => ( comments[index].comment = joke ))
         yield put(fetchCommentsSuccess(comments));
