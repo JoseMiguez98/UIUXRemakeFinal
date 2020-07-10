@@ -1,0 +1,33 @@
+.modalContent {
+  position: relative;
+  border: 1px solid $black-2;
+  width: 70%;
+  background: $black-0;
+  padding: 20px;
+
+  &__close {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: $white;
+    font-size: 25px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+  }
+}
+
+.modalOverlay {
+  background: rgba($black-0, 0.7);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}

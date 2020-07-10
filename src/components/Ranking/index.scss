@@ -1,25 +1,31 @@
 .ranking-wrapper {
-    width: 100%;
+  width: 100%;
+  &__user {
+    display: flex;
+    align-content: center;
+    .rank-star {
+      margin-left: 10px;
+      cursor: pointer;
+      &__body {
+        fill: $black;
+      }
 
-    &__user {
-        display: flex;
-        align-content: center;
-        .rank-star {
-            margin-left: 10px;
-            cursor: pointer;
-            &__body {
-                fill: $black;
-            }
+      &__border {
+        fill: $black-2;
+      }
 
-            &__border {
-                fill: $black-2;
-            }
-
-            &--marked {
-                &__body {
-                    fill: $white-2;
-                }
-            }
+      &--marked {
+        &__body {
+          fill: $white-2;
         }
+      }
     }
+  }
+}
+
+.toast-notification {
+  span {
+    border: 1px solid $black-2;
+    border-radius: 10px !important;
+  }
 }
