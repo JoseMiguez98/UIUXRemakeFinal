@@ -10,6 +10,14 @@ html, body {
 
 .container-fluid {
   padding: 130px 60px 0px 60px;
+
+  &--no-padding {
+    padding: 0;
+  }
+}
+
+select {
+  cursor: pointer;
 }
 
 body {
@@ -21,3 +29,41 @@ body {
 #root {
   width: 100%;
 }
+
+[type="radio"] {
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.radio-label {
+  cursor: pointer;
+  display: inline-block;
+}
+
+button {
+  &:disabled {
+    background: rgba($black-2, 0.1);
+    cursor: initial;
+    color: $black-2;
+
+    &:hover {
+      background: rgba($black-2, 0.1);
+    }
+  }
+}
+
+//   &:before {
+//     content: '';
+//     width: 15px;
+//     height: 15px;
+//     background: $white;
+//     position: absolute;
+//     border: 1px solid $black-2;
+//     border-radius: 100%;
+//     left: 0;
+//     top: 3px;
+//   }
+// }

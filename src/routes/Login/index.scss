@@ -1,0 +1,58 @@
+.login-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  .login {
+    border: 1px solid $black-2;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 20px 30px;
+
+    &__title {
+      font-size: 22px;
+    }
+
+    &__label {
+      display: block;
+    }
+
+    &__input {
+      width: 100%;
+      background: $black-1;
+      color: $white;
+      border: 1px solid transparent;
+      box-sizing: content-box;
+      position: relative;
+    }
+
+    &__input-wrapper:not(:first-child) {
+      margin-top: 10px;
+    }
+
+    &__input-wrapper:last-child {
+      margin-top: 20px;
+    }
+
+    &__form {
+      display: flex;
+      flex-flow: column wrap;;
+    }
+
+    &__links {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    &__link {
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+}

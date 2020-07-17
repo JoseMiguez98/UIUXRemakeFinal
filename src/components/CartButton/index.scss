@@ -5,13 +5,14 @@
     padding: 15px 30px 10px 30px;
     color: $white-1;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 30px;
     border: none;
     cursor: pointer;
 
     svg {
-        width: 25px;
-        height: 25px;
+        width: 40px;
+        height: 40px;
+        position: absolute;
         fill: $white-1;
     }
 
@@ -22,10 +23,36 @@
         }
     }
 
-    &--remove {
-        background-color: $barn-red;
+    &--play {
+        background-color: $black-1;
+        svg {
+          width: 60px;
+          height: 60px;
+          position: absolute;
+        }
+
         &:active {
-            background-color: lighten($color: $barn-red, $amount: 5);
+            background-color: lighten($color: $black-1, $amount: 5);
+            outline: 1px solid $white;
+        }
+
+        &:focus {
+          outline: 1px solid $white;
+        }
+
+        .btn-buy__caption {
+          justify-content: flex-start;
+          width: 100%;
+
+          &__icon {
+            flex: 1;
+            display: flex;
+            align-items: center;
+          }
+
+          &__text {
+            flex: 2;
+          }
         }
     }
 
@@ -35,8 +62,25 @@
     }
 
     &__caption {
+      display: flex;
+      justify-content: flex-start;
+      flex: 2;
+
+      &__text {
+        flex: 4;
+        text-align: start;
+      }
+
+      &__icon {
         display: flex;
-        justify-content: space-around;
-        width: 250px;
+        align-items: center;
+        flex: 1;
+      }
+    }
+
+    &__price {
+      font-size: 25px;
+      top: 5px;
+      position: relative;
     }
 }

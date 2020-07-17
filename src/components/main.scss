@@ -20,9 +20,13 @@
 @import 'LoaderBox/index';
 @import 'HomeBanner/index';
 @import 'Modal/index';
+@import 'CheckoutProduct/index';
+@import 'CheckoutPayment/index';
 
 //Routes
 @import '../routes/GameScreen/index';
+@import '../routes/Checkout/index';
+@import '../routes/Login/index';
 
 // General styles
 @import '../App.scss';

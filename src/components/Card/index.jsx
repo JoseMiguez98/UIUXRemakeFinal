@@ -1,24 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Figure from 'react-bootstrap/Figure';
-import COD from '../../assests/covers/cod.jpg';
 import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router';
+import { connect } from 'react-redux';
 
-const Card = () => (
+const Card = ({ cover, name, price, dev, logged }) => {
+  const [redirect, setRedirect] = useState(false);
+
+  function handleRedirect() {
+    setRedirect(true);
+  }
+
+  return (
+    redirect ? <Redirect to={{ pathname: (logged ? '/checkout' : '/login'), state: { redirectPath: '/checkout' }}} /> :
     <div className="card-wrapper">
         <Figure className="game-card">
         <div className="card-wrapper__links">
-            <div className="card-wrapper__links__see-more"><Link to="/game">Ver más</Link></div>
-            <div className="card-wrapper__links__buy-game"><a href="#">Comprar</a></div>
+            <div className="card-wrapper__links__see-more">
+              <Link to="/game">Ver más</Link>
+            </div>
+            <div className="card-wrapper__links__buy-game">
+              <Link onClick={ handleRedirect }>Comprar</Link>
+            </div>
         </div>
-            <Figure.Image
-            src={COD}/>
+            <Figure.Image src={ cover }/>
         </Figure>
         <div className="card-wrapper__footer">
-            <div className="card-wrapper__footer__name">Call of duty: Black Ops</div>
-            <div className="card-wrapper__footer__developer">Activisión</div>
-            <div className="card-wrapper__footer__price">300 ARS</div>
+            <div className="card-wrapper__footer__name">{ name }</div>
+            <div className="card-wrapper__footer__developer">{ dev }</div>
+            <div className="card-wrapper__footer__price">{ price }</div>
         </div>
     </div>
-);
+  );
+};
 
-export default Card;
+const mapStateToProps = ({ user }) => {
+  const { logged } = user;
+  return { logged };
+};
+
+export default connect(mapStateToProps)(Card);

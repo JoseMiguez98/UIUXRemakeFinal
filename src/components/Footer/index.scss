@@ -7,6 +7,10 @@
     background: $black-1;
     padding: 20px;
 
+    &--login {
+      top: 100%;
+    }
+
     &__row {
         width: 100%;
     }

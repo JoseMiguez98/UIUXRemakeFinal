@@ -1,7 +1,12 @@
 import React, { Fragment } from 'react';
+import { connect } from 'react-redux';
+
 import PreviewSlider from '../../components/PreviewSlider';
 import GameInfoBox from '../../components/GameInfoBox';
 import Comments from '../../components/Comments';
+import Ranking from '../../components/Ranking';
+import HighScores from '../../components/HighScores';
+
 import pic from '../../assests/game/pic.jpg';
 import pic1 from '../../assests/game/pic1.jpg';
 import pic2 from '../../assests/game/pic2.jpg';
@@ -14,21 +19,19 @@ import pic8 from '../../assests/game/pic8.jpg';
 import pic9 from '../../assests/game/pic9.jpg';
 import PEGI18 from '../../assests/califications/PEGI.png';
 import ESRB17 from '../../assests/califications/ESRB.png';
-import Ranking from '../../components/Ranking';
-import HighScores from '../../components/HighScores';
 
-const InfoItem = ({subtitle, caption}) => (
+const InfoItem = ({ subtitle, caption }) => (
   <div className="info-item-wrapper">
     <h4 className="info-item-wrapper__subtitle">{subtitle}</h4>
     <div className="info-item-wrapper__caption">{caption}</div>
   </div>
 );
 
-const GameScreen = () => (
+const GameScreen = ({ bought }) => (
   <div className="game-screen">
     <div className="game-screen__row">
       <PreviewSlider pictures={[pic,pic1,pic2,pic3,pic4,pic5,pic6,pic7,pic8,pic9]} />
-      <GameInfoBox />
+      <GameInfoBox bought={ bought } />
     </div>
     <div className="game-screen__row">
       <div className="game-screen__row__subtitle-wrapper">
@@ -91,4 +94,8 @@ const GameScreen = () => (
   </div>
 );
 
-export default GameScreen;
+const mapStateToProps = ({ user }) => ({
+  bought: user.bought
+});
+
+export default connect(mapStateToProps)(GameScreen);

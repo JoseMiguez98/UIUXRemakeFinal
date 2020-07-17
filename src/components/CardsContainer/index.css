@@ -30,5 +30,8 @@
     transition: transform .1s; }
     .cards-slider .swiper-button-prev:hover, .cards-slider .swiper-button-next:hover {
       transform: scale(1.2); }
+  .cards-slider .img-fluid {
+    width: 304px;
+    height: 436px; }
 
 /*# sourceMappingURL=index.css.map */

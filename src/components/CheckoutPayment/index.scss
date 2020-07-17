@@ -1,0 +1,261 @@
+.checkout-payment {
+  border: 1px solid $black-2;
+  width: 720px;
+  height: 380px;
+  display: flex;
+  flex-flow: row-reverse wrap;
+  position: relative;
+  transition: all .2s;
+
+  &--summary {
+    margin-right: 360px;
+    transform: translateX(230px);
+    flex-flow: row wrap;
+    padding: 10px;
+    width: 360px;
+  }
+
+  &--pending {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--finished {
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    width: 360px;
+
+    button {
+      position: absolute;
+      width: fit-content;
+      border-radius: initial;
+    }
+  }
+
+  &__cards {
+    flex: 1;
+    padding: 10px;
+    border-left: 1px solid $black-2;
+
+    &--summary {
+      display: none;
+    }
+  }
+
+  &__cards-list {
+    font-size: 15px;
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  &__radio-wrapper {
+    display: flex;
+    flex-flow: row-reverse;
+    width: fit-content;
+  }
+
+  &__card-radio {
+    margin-right: 10px;
+    top: 4px;
+  }
+
+  &__new-card {
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 10px 30px 10px 10px;
+    position: relative;
+
+    &--summary {
+      display: none;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+  }
+
+  &__label {
+    font-size: 15px;
+    font-weight: normal;
+    display: block;
+  }
+
+  &__input-wrapper {
+    margin: 5px 0;
+    position: relative;
+  }
+
+  &__input {
+    background: $black-1;
+    color: $white;
+    border: 1px solid transparent;
+    box-sizing: content-box;
+    position: relative;
+
+    &:focus {
+      border: 1px solid $black-2;
+      border-radius: 0;
+    }
+  }
+
+  &__number, &__name {
+    width: 100%;
+  }
+
+  &__select:last-child {
+    margin: 0 10px;
+  }
+
+  &__cvv {
+    width: 80px;
+  }
+
+  &__question-icon {
+    max-width: 20px;
+  }
+
+  &__question-button {
+    position: absolute;
+    background: none;
+    color: $white-1;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+    bottom: 3px;
+
+    &:active {
+      color: $white-3;
+      transform: scale(0.9)
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__cvv-tooltip {
+    opacity: 0;
+    width: 150px;
+    transition: opacity .3s;
+    border: 1px solid $black-2;
+    border-radius: 3px 10px 10px;
+    padding: 8px;
+    position: absolute;
+    left: 95px;
+    margin-top: 10px;
+    background: $black;
+    z-index: 500  ;
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    &--open {
+      opacity: 1;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0px;
+      bottom: 100%;
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+      border-bottom-color: $black-2;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 1px;
+      bottom: 100%;
+      width: 0;
+      height: 0;
+      border: 9px solid transparent;
+      border-bottom-color: $black;
+    }
+  }
+
+  &__exp-cvv {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  &__submit-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: fit-content;
+
+    button {
+      border-radius: 0;
+    }
+  }
+
+  &__title {
+    font-size: 22px;
+  }
+
+  &__summary {
+    display: flex;
+    flex-flow: column;
+    &-title {
+      font-size: 22px;
+    }
+
+    button {
+      position: absolute;
+      width: fit-content;
+      border-radius: initial;
+    }
+
+    &-back {
+      bottom: 0;
+      left: 0;
+    }
+
+    &-accept {
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &__finished {
+    &-title {
+      font-size: 22px;
+      text-align: center;
+      flex: 1;
+    }
+
+    &-info {
+      display: flex;
+      flex-flow: column wrap;
+      flex: 1;
+    }
+
+    &-continue {
+      bottom: 0;
+      right: 0;
+    }
+
+    &-home {
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

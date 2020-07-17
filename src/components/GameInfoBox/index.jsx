@@ -15,18 +15,9 @@ class GameInfoBox extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpen: false,
-      inCart: false
+      isOpen: false
     }
-    this.toggleCart = this.toggleCart.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
-  }
-
-  toggleCart() {
-    this.setState(prevState => ({
-      ...prevState,
-      inCart: !prevState.inCart
-    }));
   }
 
   toggleModal(e) {
@@ -38,11 +29,12 @@ class GameInfoBox extends Component {
   }
 
   render() {
-    const { inCart, isOpen } = this.state;
+    const { isOpen } = this.state;
+    const { bought } = this.props;
     return (
       <div className="game-info-wrapper">
         <div className="game-info-wrapper__image-wrapper">
-          <img src={COVER} alt="game cover" />
+          <img src={ COVER } alt="game cover" />
         </div>
         <div className="game-info-wrapper__text-wrapper">
           <h1 className="game-info-wrapper__text-wrapper__title">{ gameTitle }</h1>
@@ -67,7 +59,10 @@ class GameInfoBox extends Component {
          />
         </div>
         <div className="game-info-wrapper__button-wrapper">
-          <CartButton handleClick={this.toggleCart} add={!inCart} price={1200}/>
+          <CartButton
+            price={1200}
+            bought={ bought }
+          />
         </div>
       </div>
     );

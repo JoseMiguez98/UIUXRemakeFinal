@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Footer = () => (
-    <footer className="footer">
+const Footer = ({ isLogin }) => (
+    <footer className={`footer ${isLogin ? 'footer--login' : ''}`}>
         <div className="footer__row footer__first-row">
             <div className="footer__first-row__social">
                 <div className="footer__first-row__social__title">Seguinos en nuestras redes</div>

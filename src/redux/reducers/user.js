@@ -19,7 +19,8 @@ export default function userReducer(state = initialState(), { type }) {
         case LOGOUT:
             return {
                 ...state,
-                logged: false
+                logged: false,
+                bought: false
             };
         case BUY:
             return {
